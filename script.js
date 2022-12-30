@@ -7,7 +7,7 @@ const typeSound = new Audio("./sound/type.mp3");
 const falseSound = new Audio("./sound/false.mp3");
 const trueSound = new Audio("./sound/true.mp3");
 // テキストを入力して、あっているかどうかを確認する
-var clearcount = 0;
+window.clearcount = 0;
 
 typeInput.addEventListener("input",()=> {
     // タイプ音再生
@@ -41,7 +41,7 @@ typeInput.addEventListener("input",()=> {
     });
 
     if(correct == true){
-        countUp();
+        clearcount+=1;
         document.getElementById("count").title = String(count);
         trueSound.play();
         trueSound.currentTime = 0;
@@ -83,7 +83,9 @@ function StartTimer(){
     startTime = new Date();
     setInterval(() => {
         timer.innerText = originTime - getTimerTime();
-        if(timer.innerText <= 0) TimeUp();
+        if(timer.innerText <= 0){
+            TimeUp();
+        }
     },1000);
 }
 
@@ -92,8 +94,7 @@ function getTimerTime(){
 }
 
 function TimeUp(){
-    // RenderNextSentence();
-    count = clearcount;
+    window.localStorage.setItem("result", clearcount);
     window.location.href = "./result.html";
 }
 
