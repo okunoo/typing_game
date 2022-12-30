@@ -31,13 +31,13 @@ body{
 .timer{
     position: absolute;
     top: 1rem;
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(241, 82, 8);
 }
 
 .text{
     position: absolute;
-    top:110px;
+    top:80px;
     font-size: 1.5rem;
     font-weight: bold;
 }
