@@ -30,15 +30,15 @@ body{
 
 .timer{
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     font-size: 5rem;
     color: rgb(241, 82, 8);
 }
 
 .text{
     position: absolute;
-    top:140px;
-    font-size: 2rem;
+    top:110px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
